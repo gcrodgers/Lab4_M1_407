@@ -10,12 +10,13 @@
         android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="308dp"
+        android:layout_marginTop="248dp"
+        android:onClick="startDownload"
         android:text="Start"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="startDownload"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/stop_button"

@@ -81,12 +81,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void stopDownload(View view) {
         stopThread = true;
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                download_progress.setText("");
+            }
+        });
     }
 
     private class ExampleRunnable implements Runnable {
         @Override
         public void run() {
             mockFileDownloader();
+            stopThread = false;
         }
     }
 }
